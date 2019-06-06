@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gear Design</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body style="background-color: black">
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="/__/firebase/6.1.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#reserved-urls -->
+
+<!-- Initialize Firebase -->
+<script src="/__/firebase/init.js"></script>
+    <div class="contenedor">
+        <header class="header"><h2>Gear Design</h2></header>
+        <main class="contenido">
+            <form>
+                <div class="form-group">
+                    <h4 id="paso1">Paso 1</h4>
+                    <label for="exampleInputEmail1">Ingrese la potencia de la máquina motriz.</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">                    
+                </div>
+                <div class="form-group">
+                    <h4 id="paso2">Paso 2</h4>
+                    <label for="exampleInputEmail1">Ingrese la velocidad de la máquina motriz.</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">                    
+                </div>
+                <div class="form-group">
+                    <h4 id="paso3">Paso 3</h4>
+                    <label for="exampleInputEmail1">Ingrese la velocidad de la máquina conducida.</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">                    
+                </div>
+                <div class="form-group">
+                    <h4 id="paso4">Paso 4</h4>
+                    <label for="exampleInputEmail1">Ingrese el tipo de trabajo de la máquina motriz.</label>
+                    
+                    <div class="btn-group section container" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-secondary">Uniforme</button>
+                        <button type="button" class="btn btn-secondary">Ligero</button>
+                        <button type="button" class="btn btn-secondary">Moderado</button>
+                        <button type="button" class="btn btn-secondary">Pesado</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <h4 id="paso5">Paso 5</h4>
+                    <label fo="exampleInputEmail1">Ingrese el tipo de trabajo de la máquina conducida.</label>
+                    <div class="btn-group section container" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-secondary">Uniforme</button>
+                            <button type="button" class="btn btn-secondary">Ligero</button>
+                            <button type="button" class="btn btn-secondary">Moderado</button>
+                            <button type="button" class="btn btn-secondary">Pesado</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <h4 id="paso6">Paso 6</h4>
+                    <label for="exampleInputEmail1">Ingrese el paso diametral.</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">                    
+                </div>
+                <div class="form-group">
+                    <h4 id="paso7">Paso 7</h4>
+                    <label for="exampleInputEmail1">Seleccione el número de dientes del piñon.</label>
+                    <div class="btn-group section container" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-secondary">12</button>
+                            <button type="button" class="btn btn-secondary">18</button>
+                            
+                    </div>
+                </div>
+                <div class="form-group">
+                    <h4 id="paso8">Paso 8</h4>
+                    <label for="exampleInputEmail1">Ingrese el valor de Jp.</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">                    
+                </div>
+                <div class="form-group">
+                    <h4 id="paso9">Paso 9</h4>
+                    <label for="exampleInputEmail1">Ingrese el valor de Jg.</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">                    
+                </div>
+                <div class="form-group">
+                    <h4 id="paso10">Paso 10</h4>
+                    <label for="exampleInputEmail1">Ingrese el valor de I.</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">                    
+                </div>
+                <div class="form-group">
+                    <h4 id="paso11">Paso 11</h4>
+                    <label for="exampleInputEmail1">Seleccione el tipo de engrane.</label>
+                    <div class="btn-group section container" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-secondary">Engranaje abierto</button>
+                            <button type="button" class="btn btn-secondary">Engrane de precisión cerrado</button>
+                            <button type="button" class="btn btn-secondary">Engrane comercial cerrado</button>
+                            <button type="button" class="btn btn-secondary">Engrane de extra precisión cerrado</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <h4 id="paso12">Paso 12</h4>
+                    <label for="exampleInputEmail1">Seleccione el porcentaje de confiabilidad.</label>
+                    <div class="btn-group section container" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-secondary">90%</button>
+                            <button type="button" class="btn btn-secondary">99%</button>
+                            <button type="button" class="btn btn-secondary">99.9%</button>
+                            <button type="button" class="btn btn-secondary">99.99%</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <h4 id="paso13">Paso 13</h4>
+                    <label for="exampleInputEmail1">¿Cuántas horas al dia trabajará la máquina?.</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">                    
+                </div>
+                <div class="form-group">
+                    <h4 id="paso14">Paso 14</h4>
+                    <label fo="exampleInputEmail1">¿Cuántos dias al año trabajará la máquina?.</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">                    
+                </div>
+                <div class="form-group">
+                    <h4 id="paso15">Paso 15</h4>
+                    <label for="exampleInputEmail1">¿Cuántos años trabajará la máquina?.</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">                    
+                </div>
+                <div class="form-group">
+                    <h4 id="paso16">Paso 16</h4>
+                    <label for="exampleInputEmail1">Seleccione el número de recta correspondiente.</label>
+                    <div class="btn-group section container" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-secondary">1</button>
+                            <button type="button" class="btn btn-secondary">2</button>
+                            <button type="button" class="btn btn-secondary">3</button>
+                            <button type="button" class="btn btn-secondary">4</button>
+                            <button type="button" class="btn btn-secondary">5</button>
+                            <button type="button" class="btn btn-secondary">6</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <h4 id="paso17">Paso 17</h4>
+                    <label for="exampleInputEmail1">Seleccione el número de recta correspondiente.</label>
+                    <div class="btn-group section container" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-secondary">1</button>
+                            <button type="button" class="btn btn-secondary">2</button>
+                            <button type="button" class="btn btn-secondary">3</button>
+                            
+                    </div>
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary">  Calcular  </button>
+            </form>
+        </main>
+        <aside class="sidebar">
+            <ul>
+                <li><a href="#paso1">Paso 1</a></li>
+                <li><a href="#paso2">Paso 2</a></li>
+                <li><a href="#paso3">Paso 3</a></li>
+                <li><a href="#paso4">Paso 4</a></li>
+                <li><a href="#paso5">Paso 5</a></li>
+                <li><a href="#paso6">Paso 6</a></li>
+                <li><a href="#paso7">Paso 7</a></li>
+                <li><a href="#paso8">Paso 8</a></li>
+                <li><a href="#paso9">Paso 9</a></li>
+                <li><a href="#paso10">Paso 10</a></li>
+                <li><a href="#paso11">Paso 11</a></li>
+                <li><a href="#paso12">Paso 12</a></li>
+                <li><a href="#paso13">Paso 13</a></li>
+                <li><a href="#paso14">Paso 14</a></li>
+                <li><a href="#paso15">Paso 15</a></li>
+                <li><a href="#paso16">Paso 16</a></li>
+                <li><a href="#paso17">Paso 17</a></li>
+                <li><a href="#paso18">Paso 18</a></li>
+            </ul>
+        </aside>
+        <div class="widget1">
+            <h3>Resultados</h3>
+        </div>
+        <div class="widget2">
+                <h3>Otros</h3>
+        </div>
+        <footer class="footer">
+            <h3>México 2019</h3>
+        </footer>
+    </div>
+    
+</body>
+</html>
