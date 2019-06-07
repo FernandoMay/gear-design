@@ -18,135 +18,143 @@
 
 <!-- Initialize Firebase -->
 <script src="/__/firebase/init.js"></script>
-    <div class="contenedor">
+
+    <div class="contenedor" id="skinner">
         <header class="header"><h2>Gear Design</h2></header>
         <main class="contenido">
-            <form>
+            <div>
                 <div class="form-group">
                     <h4 id="paso1">Paso 1</h4>
-                    <label for="exampleInputEmail1">Ingrese la potencia de la máquina motriz.</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">                    
+                    <label for="potencia">Ingrese la potencia de la máquina motriz.</label>
+                    <input type="text" class="form-control" id="potencia" placeholder="" v-model="potencia">  
                 </div>
                 <div class="form-group">
                     <h4 id="paso2">Paso 2</h4>
-                    <label for="exampleInputEmail1">Ingrese la velocidad de la máquina motriz.</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">                    
+                    <label for="velocidadmotriz">Ingrese la velocidad de la máquina motriz.</label>
+                    <input type="text" class="form-control" id="velocidadmotriz" placeholder="" v-model="velmotriz">                    
                 </div>
                 <div class="form-group">
                     <h4 id="paso3">Paso 3</h4>
-                    <label for="exampleInputEmail1">Ingrese la velocidad de la máquina conducida.</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">                    
+                    <label for="velocidadconducida">Ingrese la velocidad de la máquina conducida.</label>
+                    <input type="text" class="form-control" id="velocidadconducida" placeholder="" v-model="velconducida">                    
                 </div>
                 <div class="form-group">
                     <h4 id="paso4">Paso 4</h4>
-                    <label for="exampleInputEmail1">Ingrese el tipo de trabajo de la máquina motriz.</label>
-                    
-                    <div class="btn-group section container" role="group" aria-label="Basic example">
-                        <button type="button" class="btn btn-secondary">Uniforme</button>
-                        <button type="button" class="btn btn-secondary">Ligero</button>
-                        <button type="button" class="btn btn-secondary">Moderado</button>
-                        <button type="button" class="btn btn-secondary">Pesado</button>
+                    <label for="trabajomotriz">Ingrese el tipo de trabajo de la máquina motriz.</label>
+                    <p> Seleccionado: <strong>{{$data.trabajomotriz}}</strong></p>
+                    <div class="btn-group section container" role="group">
+                        <button type="button" class="btn btn-secondary" v-on:click="trabajomotriz='Uniforme'">Uniforme</button>
+                        <button type="button" class="btn btn-secondary" v-on:click="trabajomotriz='Ligero'">Ligero</button>
+                        <button type="button" class="btn btn-secondary" v-on:click="trabajomotriz='Moderado'">Moderado</button>
+                        <button type="button" class="btn btn-secondary" v-on:click="trabajomotriz='Pesado'">Pesado</button>
                     </div>
                 </div>
                 <div class="form-group">
                     <h4 id="paso5">Paso 5</h4>
-                    <label fo="exampleInputEmail1">Ingrese el tipo de trabajo de la máquina conducida.</label>
+                    <label for="trabajoconducida">Ingrese el tipo de trabajo de la máquina conducida.</label>
+                    <p> Seleccionado: <strong>{{$data.trabajoconducida}}</strong></p>
                     <div class="btn-group section container" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-secondary">Uniforme</button>
-                            <button type="button" class="btn btn-secondary">Ligero</button>
-                            <button type="button" class="btn btn-secondary">Moderado</button>
-                            <button type="button" class="btn btn-secondary">Pesado</button>
+                            <button type="button" class="btn btn-secondary" v-on:click="trabajoconducida='Uniforme'">Uniforme</button>
+                            <button type="button" class="btn btn-secondary" v-on:click="trabajoconducida='Ligero'">Ligero</button>
+                            <button type="button" class="btn btn-secondary" v-on:click="trabajoconducida='Moderado'">Moderado</button>
+                            <button type="button" class="btn btn-secondary" v-on:click="trabajomotriz='Pesado'">Pesado</button>
                     </div>
                 </div>
                 <div class="form-group">
                     <h4 id="paso6">Paso 6</h4>
-                    <label for="exampleInputEmail1">Ingrese el paso diametral.</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">                    
+                    <label for="pasod">Ingrese el paso diametral.</label>
+                    <input type="text" class="form-control" id="pasod" placeholder="" v-model="pasodiametral">                    
                 </div>
                 <div class="form-group">
                     <h4 id="paso7">Paso 7</h4>
-                    <label for="exampleInputEmail1">Seleccione el número de dientes del piñon.</label>
+                    <label for="dientes">Seleccione el número de dientes del piñon.</label>
+                    <p> Seleccionado: <strong>{{$data.dientes}}</strong></p>
                     <div class="btn-group section container" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-secondary">12</button>
-                            <button type="button" class="btn btn-secondary">18</button>
-                            
+                            <button type="button" class="btn btn-secondary" v-on:click="dientes='12'">12</button>
+                            <button type="button" class="btn btn-secondary" v-on:click="dientes='18'">18</button>
                     </div>
                 </div>
                 <div class="form-group">
                     <h4 id="paso8">Paso 8</h4>
-                    <label for="exampleInputEmail1">Ingrese el valor de Jp.</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">                    
+                    <label for="jp">Ingrese el valor de Jp.</label>
+                    <input type="text" class="form-control" id="jp" placeholder="" v-model="jp">                    
                 </div>
                 <div class="form-group">
                     <h4 id="paso9">Paso 9</h4>
-                    <label for="exampleInputEmail1">Ingrese el valor de Jg.</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">                    
+                    <label for="jg">Ingrese el valor de Jg.</label>
+                    <input type="text" class="form-control" id="jg" placeholder="" v-model="jg">                    
                 </div>
                 <div class="form-group">
                     <h4 id="paso10">Paso 10</h4>
-                    <label for="exampleInputEmail1">Ingrese el valor de I.</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">                    
+                    <label for="iq">Ingrese el valor de I.</label>
+                    <input type="text" class="form-control" id="iq" placeholder="" v-model="i">                    
                 </div>
                 <div class="form-group">
                     <h4 id="paso11">Paso 11</h4>
-                    <label for="exampleInputEmail1">Seleccione el tipo de engrane.</label>
-                    <div class="btn-group section container" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-secondary">Engranaje abierto</button>
-                            <button type="button" class="btn btn-secondary">Engrane de precisión cerrado</button>
-                            <button type="button" class="btn btn-secondary">Engrane comercial cerrado</button>
-                            <button type="button" class="btn btn-secondary">Engrane de extra precisión cerrado</button>
+                    <label for="tipoengrane">Seleccione el tipo de engrane.</label>
+                    <p> Seleccionado: <strong>{{$data.tipoengrane}}</strong></p>
+                    <div class="btn-group section container" role="group">
+                            <button type="button" class="btn btn-secondary" v-on:click="tipoengrane='Engrane abierto'">Engrane abierto</button>
+                            <button type="button" class="btn btn-secondary" v-on:click="tipoengrane='Engrane de precisión cerrado'">Engrane de precisión cerrado</button>
+                            <button type="button" class="btn btn-secondary" v-on:click="tipoengrane='Engrane comercial cerrado'">Engrane comercial cerrado</button>
+                            <button type="button" class="btn btn-secondary" v-on:click="tipoengrane='Engrane de extra precisión cerrado'">Engrane de extra precisión cerrado</button>
                     </div>
                 </div>
                 <div class="form-group">
                     <h4 id="paso12">Paso 12</h4>
-                    <label for="exampleInputEmail1">Seleccione el porcentaje de confiabilidad.</label>
-                    <div class="btn-group section container" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-secondary">90%</button>
-                            <button type="button" class="btn btn-secondary">99%</button>
-                            <button type="button" class="btn btn-secondary">99.9%</button>
-                            <button type="button" class="btn btn-secondary">99.99%</button>
+                    <label for="confiabilidad">Seleccione el porcentaje de confiabilidad.</label>
+                    <p> Seleccionado: <strong>{{$data.confiabilidad}} %</strong></p>
+                    <div class="btn-group section container" role="group">
+                            <button type="button" class="btn btn-secondary" v-on:click="confiabilidad='90'">90 %</button>
+                            <button type="button" class="btn btn-secondary" v-on:click="confiabilidad='99'">99 %</button>
+                            <button type="button" class="btn btn-secondary" v-on:click="confiabilidad='99.9'">99.9 %</button>
+                            <button type="button" class="btn btn-secondary" v-on:click="confiabilidad='99.99'">99.99 %</button>
                     </div>
                 </div>
                 <div class="form-group">
                     <h4 id="paso13">Paso 13</h4>
-                    <label for="exampleInputEmail1">¿Cuántas horas al dia trabajará la máquina?.</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">                    
+                    <label for="dias">¿Cuántas horas al dia trabajará la máquina?.</label>
+                    <input type="text" class="form-control" id="dias" placeholder="" v-model="horasdia">                    
                 </div>
                 <div class="form-group">
                     <h4 id="paso14">Paso 14</h4>
-                    <label fo="exampleInputEmail1">¿Cuántos dias al año trabajará la máquina?.</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">                    
+                    <label for="diasaño">¿Cuántos dias al año trabajará la máquina?.</label>
+                    <input type="text" class="form-control" id="diasaño" placeholder="" v-model="diasaño">                    
                 </div>
                 <div class="form-group">
                     <h4 id="paso15">Paso 15</h4>
-                    <label for="exampleInputEmail1">¿Cuántos años trabajará la máquina?.</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">                    
+                    <label for="años">¿Cuántos años trabajará la máquina?.</label>
+                    <input type="text" class="form-control" id="año" placeholder="" v-model="años">                    
                 </div>
                 <div class="form-group">
                     <h4 id="paso16">Paso 16</h4>
-                    <label for="exampleInputEmail1">Seleccione el número de recta correspondiente.</label>
-                    <div class="btn-group section container" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-secondary">1</button>
-                            <button type="button" class="btn btn-secondary">2</button>
-                            <button type="button" class="btn btn-secondary">3</button>
-                            <button type="button" class="btn btn-secondary">4</button>
-                            <button type="button" class="btn btn-secondary">5</button>
-                            <button type="button" class="btn btn-secondary">6</button>
+                    <label for="recta1">Seleccione el número de recta correspondiente.</label>
+                    <p> Seleccionado: <strong>{{$data.recta1}}</strong></p>
+                    <div class="btn-group section container" role="group" >
+                            <button type="button" class="btn btn-secondary" v-on:click="recta1='1'">1</button>
+                            <button type="button" class="btn btn-secondary" v-on:click="recta1='2'">2</button>
+                            <button type="button" class="btn btn-secondary" v-on:click="recta1='3'">3</button>
+                            <button type="button" class="btn btn-secondary" v-on:click="recta1='4'">4</button>
+                            <button type="button" class="btn btn-secondary" v-on:click="recta1='5'">5</button>
+                            <button type="button" class="btn btn-secondary" v-on:click="recta1='6'">6</button>
                     </div>
                 </div>
                 <div class="form-group">
                     <h4 id="paso17">Paso 17</h4>
-                    <label for="exampleInputEmail1">Seleccione el número de recta correspondiente.</label>
-                    <div class="btn-group section container" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-secondary">1</button>
-                            <button type="button" class="btn btn-secondary">2</button>
-                            <button type="button" class="btn btn-secondary">3</button>
-                            
+                    <label for="recta2">Seleccione el número de recta correspondiente.</label>
+                    <p> Seleccionado: <strong>{{$data.recta2}}</strong></p>
+                    <div class="btn-group section container" role="group" >
+                            <button type="button" class="btn btn-secondary" v-on:click="recta2='1'">1</button>
+                            <button type="button" class="btn btn-secondary" v-on:click="recta2='2'">2</button>
+                            <button type="button" class="btn btn-secondary" v-on:click="recta2='3'">3</button>   
                     </div>
                 </div>
                 <br>
-                <button type="submit" class="btn btn-primary">  Calcular  </button>
-            </form>
+                <button type="submit" class="btn btn-primary btn-lg">  Calcular  </button>
+            </div>
+
+
+
         </main>
         <aside class="sidebar">
             <ul>
@@ -170,16 +178,26 @@
                 <li><a href="#paso18">Paso 18</a></li>
             </ul>
         </aside>
+
         <div class="widget1">
             <h3>Resultados</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id ab dolorum neque asperiores earum cupiditate libero rem est nemo. Enim earum velit unde non nisi, aperiam consectetur. Vitae, sed suscipit.</p>
+            <pre style="color: white"> {{$data}} </pre>
         </div>
+
         <div class="widget2">
-                <h3>Otros</h3>
+            <h3></h3>
         </div>
         <footer class="footer">
-            <h3>México 2019</h3>
+            <h3>&copy; México 2019</h3>
         </footer>
     </div>
-    
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script src="app.js"></script>
 </body>
 </html>
